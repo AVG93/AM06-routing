@@ -1,3 +1,8 @@
 <p>
   Este es el contenido de la Pagina UNO.
 </p>
+
+
+<ul>
+  <li *ngFor="let p of paises" [routerLink]="['/pais', p.id]">{{p.nombre}}</li>
+</ul>
