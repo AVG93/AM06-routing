@@ -4,11 +4,14 @@ import { RouterModule, Routes } from '@angular/router';
 import { HelloComponent } from './hello.component';
 import { UnoComponent } from './uno/uno.component';
 import { DosComponent } from './dos/dos.component';
+import { NotFoundComponent } from './not-found/not-found.component';
 
 const routes: Routes = [
   { path: 'home', component: HelloComponent },
   { path: 'uno', component: UnoComponent },
-  { path: 'dos', component: DosComponent }
+  { path: 'dos', component: DosComponent },
+  { path: '', redirectTo: '/home', pathMatch: 'full' },
+  { path: '**', component: NotFoundComponent }
 ];
 
 @NgModule({
