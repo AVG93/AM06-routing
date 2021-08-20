@@ -6,12 +6,14 @@ import { UnoComponent } from './uno/uno.component';
 import { DosComponent } from './dos/dos.component';
 import { NotFoundComponent } from './not-found/not-found.component';
 import { PaisDetalleComponent } from './pais-detalle/pais-detalle.component';
+import { TresComponent } from './tres/tres.component';
 
 const routes: Routes = [
   { path: 'home', component: HelloComponent },
   { path: 'uno', component: UnoComponent },
   { path: 'pais/:id', component: PaisDetalleComponent },
   { path: 'dos', component: DosComponent },
+  { path: 'tres', component: TresComponent },
   { path: '', redirectTo: '/home', pathMatch: 'full' },
   { path: '**', component: NotFoundComponent }
 ];
