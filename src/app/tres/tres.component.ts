@@ -27,7 +27,9 @@ export class TresComponent implements OnInit {
   }
 
   enviar() {
-    console.warn(JSON.stringify(this.formGroup.value));
+    const resp: any = this.formGroup.value;
+    console.warn(resp.nombre);
+    console.warn(resp.correo);
   }
 
   get form() {
