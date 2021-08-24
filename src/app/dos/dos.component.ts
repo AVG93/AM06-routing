@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { Alumno } from '../interfaces/alumno';
 
 @Component({
   selector: 'app-dos',
@@ -6,10 +7,23 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./dos.component.css']
 })
 export class DosComponent implements OnInit {
+  /*alumno: Alumno = {
+    matricula: 1496312,
+    nombre: 'Juan Gonzalez',
+    correo: 'juan@gmail.com'
+  };*/
 
-  constructor() { }
+  alumno: Alumno = {
+    matricula: null,
+    nombre: '',
+    correo: ''
+  };
 
-  ngOnInit() {
+  constructor() {}
+
+  ngOnInit() {}
+
+  enviar() {
+    console.warn(this.alumno.nombre);
   }
-
 }

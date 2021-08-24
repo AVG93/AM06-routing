@@ -1,3 +1,39 @@
 <p>
-  Este es el contenido de la Pagina DOS.
+  Template Form
 </p>
+
+<div class="container">
+  <form (ngSubmit)="enviar()" #formulario="ngForm">
+
+    <label for="nombre">Nombre</label>
+    <input 
+      [(ngModel)]="alumno.nombre" 
+      [ngModelOptions]="{standalone: true}"
+      type="text"
+      #nombre="ngModel"
+      required
+      placeholder="Ingresa tu nombre"
+      minlength="8"
+      class="form-control"
+      [ngClass]="{'is-valid': !nombre.invalid && (nombre.dirty || nombre.touched), 'is-invalid': nombre.invalid && (nombre.dirty || nombre.touched)}"/>
+
+    <div *ngIf="nombre.invalid && (nombre.dirty || nombre.touched)">
+      <div *ngIf="nombre.errors.minlength">
+        Introduzca minimo 8 letras
+      </div>
+      <div *ngIf="nombre.errors.required">
+        Ingresa una nombre
+      </div>
+    </div>
+
+    <br>
+    <br>
+    <br>
+
+    <div>
+      <button type="submit" [disabled]="!formulario.valid" class="signup-btn">Enviar</button>
+    </div>
+
+
+  </form>
+</div>
