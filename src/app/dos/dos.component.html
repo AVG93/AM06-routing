@@ -6,8 +6,8 @@
   <form (ngSubmit)="enviar()" #formulario="ngForm">
 
     <label for="nombre">Nombre</label>
-    <input 
-      [(ngModel)]="alumno.nombre" 
+    <input
+      [(ngModel)]="alumno.nombre"
       [ngModelOptions]="{standalone: true}"
       type="text"
       #nombre="ngModel"

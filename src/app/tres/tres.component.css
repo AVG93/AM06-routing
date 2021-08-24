@@ -1,0 +1,8 @@
+.is-invalid {
+  background-color: darkred;
+  color: white;
+}
+
+.desc-error {
+  color: red;
+}
